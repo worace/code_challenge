@@ -2,7 +2,7 @@
 
 Write a program that takes a word problem and returns the answer as an integer.
 
-## Step 1
+## Iteration 1
 
 E.g.
 
@@ -10,14 +10,10 @@ E.g.
 
 The program should handle large numbers and negative numbers.
 
-Remember, that these are verbal word problems, not treated as you
-normally would treat a written problem.  This means that you calculate
-as you move forward each step.  3 + 2 * 3 = 15, not 9.
+Remember, that these are verbal word problems, not treated as you normally would treat a written problem.  This means that you calculate as you move forward each step.  3 + 2 * 3 = 15, not 9.
 
-Use the tests to drive your solution by deleting the `skip` in one test
-at a time.
 
-## Step 2
+## Iteration 2
 
 E.g.
 
@@ -29,7 +25,7 @@ E.g.
 
 > What is 25 divided by 5?
 
-## Step 3
+## Iteration 3
 
 E.g.
 
@@ -41,7 +37,7 @@ E.g.
 
 > What is 3 plus 5 minus 8?
 
-## Step 4
+## Iteration 4
 
 E.g.
 
