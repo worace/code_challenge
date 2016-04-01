@@ -1,4 +1,4 @@
-# Wordy
+# Word Problem
 
 Write a program that takes a word problem and returns the answer as an integer.
 
