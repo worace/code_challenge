@@ -1,11 +1,10 @@
-require "pry"
 class WordProblem
   attr_reader :question
   def initialize(question)
     @question = question
   end
 
-  def math_bits
+  def preprocessed_q
     question.sub("What is ", "").sub(/\?$/, "").gsub(" by", "")
   end
 
@@ -17,12 +16,12 @@ class WordProblem
   end
 
   def tokens
-    operators.reduce(math_bits) do |str, (verb, symbol)|
-      str.gsub(verb, symbol)
+    operators.reduce(preprocessed_q) do |question, (verb, operator)|
+      question.gsub(verb, operator)
     end.split
   end
 
-  def validated_tokens
+  def valid_tokens
     tokens.map do |t|
       if t.match(/\d/) || operators.invert[t]
         t
@@ -33,7 +32,7 @@ class WordProblem
   end
 
   def answer
-    initial_value, *chain = validated_tokens
+    initial_value, *chain = valid_tokens
 
     chain.each_slice(2).reduce(initial_value.to_i) do |result, (operator, arg)|
       result.send(operator, arg.to_i)
