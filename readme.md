@@ -1,66 +1,70 @@
-# Scale Generator
+# Wordy
 
-Write a program that can generate musical scales, given a starting note and a set of intervals.
+Write a program that takes a word problem and returns the answer as an integer.
 
-Write a program that can generate musical scales. It should accept
-a tonic, or starting note, and a set of intervals. It should be able to
-output the notes in the given scale, starting with the tonic and
-following the specified interval pattern.
+## Step 1
 
-Scales in Western music are based on the chromatic (12-note) scale.This
-scale can be expressed as the following group of pitches:
+E.g.
 
-A, A#, B, C, C#, D, D#, E, F, F#, G, G#
+> What is 5 plus 13?
 
-A given sharp note (indicated by a #), can also be expressed as the flat
-of the note above it (indicated by a b), so the chromatic scale can also be
-written like this:
+The program should handle large numbers and negative numbers.
 
-A, Bb, B, C, Db, D, Eb, E, F, Gb, G, Ab
+Remember, that these are verbal word problems, not treated as you
+normally would treat a written problem.  This means that you calculate
+as you move forward each step.  3 + 2 * 3 = 15, not 9.
 
-The major and minor scale and modes are subsets of this twelve-pitch
-collection. They have seven pitches, and are called diatonic scales.
-The collection of notes in these scales is written with either sharps or
-flats, depending on the tonic. Here is a list of which are which:
+Use the tests to drive your solution by deleting the `skip` in one test
+at a time.
 
-No Accidentals:
-C major
-A minor
+## Step 2
 
-Use Sharps:
-G, D, A, E, B, F# major
-e, b, f#, c#, g#, d# minor
+E.g.
 
-Use Flats:
-F, Bb, Eb, Ab, Db, Gb major
-d, g, c, f, bb, eb minor
+> What is 5 plus 13?
 
+> What is 7 minus 5?
 
-The diatonic scales, and all other scales that derive from the
-chromatic scale, are built upon intervals. An interval is the space
-between two pitches.
+> What is 6 multiplied by 4?
 
-The simplest interval is between two adjacent notes, and is called a
-"half step", or "minor second" (sometimes written as a lower-case "m").
-The interval between two notes that have an interceding note is called
-a "whole step" or "major second" (written as an upper-case "M"). The
-diatonic scales are built using only these two intervals between
-adjacent notes.
+> What is 25 divided by 5?
 
-Non-diatonic scales can contain the same letter twice, and can contain other intervals.
-Sometimes they may be smaller than usual (diminished, written "D"), or larger
-(augmented, written "A").  Intervals larger than an augmented second have other names.
+## Step 3
 
-Here is a table of pitches with the names of their interval distance from the tonic (A).
+E.g.
 
-    A    |    A#   |    B    |    C    |    C#   |    D    |    D#   |
-----------------------------------------------------------------------
-  Unison | Min 2nd | Maj 2nd | Min 3rd | Maj 3rd | Per 4th | Tritone |
-         |         | Dim 3rd | Aug 2nd | Dim 4th |         | Aug 4th |
-                                                           | Dim 5th |
+> What is 5 plus 13 plus 6?
 
+> What is 7 minus 5 minus 1?
 
-    E    |    F    |    F#   |    G    |    G#   |    A   |
------------------------------------------------------------
- Per 5th | Min 6th | Maj 6th | Min 7th | Maj 7th | Octave |
- Dim 5th | Aug 5th | Dim 7th | Aug 6th | Dim 8ve |        |
+> What is 9 minus 3 plus 5?
+
+> What is 3 plus 5 minus 8?
+
+## Step 4
+
+E.g.
+
+> What is 5 plus 13?
+
+> What is 7 minus 5?
+
+> What is 6 times 4?
+
+> What is 25 divided by 5?
+
+> What is 78 plus 5 minus 3?
+
+> What is 18 times 3 plus 16?
+
+> What is 4 times 3 divided by 6?
+
+> What is 4 plus 3 times 2?
+
+## Extensions
+
+Implement questions of the type:
+
+> What is 2 raised to the 5th power?
+
+Remember to write failing tests for this code.
