@@ -5,6 +5,15 @@ require 'minitest/pride'
 require_relative 'linked_list'
 
 class DequeTest < Minitest::Test
+  def test_tail
+    deque = Deque.new
+    assert_nil deque.tail
+    deque.push(10)
+    assert_equal 10, deque.tail
+    deque.push(20)
+    assert_equal 20, deque.tail
+  end
+
   def test_push_pop
     deque = Deque.new
     deque.push(10)
@@ -14,7 +23,6 @@ class DequeTest < Minitest::Test
   end
 
   def test_push_shift
-    skip
     deque = Deque.new
     deque.push(10)
     deque.push(20)
@@ -23,7 +31,6 @@ class DequeTest < Minitest::Test
   end
 
   def test_unshift_shift
-    skip
     deque = Deque.new
     deque.unshift(10)
     deque.unshift(20)
@@ -32,7 +39,6 @@ class DequeTest < Minitest::Test
   end
 
   def test_unshift_pop
-    skip
     deque = Deque.new
     deque.unshift(10)
     deque.unshift(20)
@@ -41,7 +47,6 @@ class DequeTest < Minitest::Test
   end
 
   def test_example # rubocop:disable Metrics/MethodLength
-    skip
     deque = Deque.new
     deque.push(10)
     deque.push(20)
